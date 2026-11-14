@@ -1,3 +1,9 @@
+## v0.2.3 (2026-11-14)
+
+### Other
+
+- bump dependencies, rename package ([e8f8b8c](https://github.com/ryangarber/markitdown-core/commit/e8f8b8cac694a7642e69de721644b73c594096c4))
+
 ## v0.2.2 (2026-11-08)
 
 ### Bug Fixes
