@@ -36,6 +36,7 @@ console.log(result?.markdown);
 ```
 
 The same `convert` method accepts:
+
 - `Uint8Array`
 - `ArrayBuffer` and `SharedArrayBuffer`
 - `DataView` or any other typed array
@@ -54,7 +55,9 @@ const result = await new MarkItDown().convert(file);
 HTTP and HTTPS URLs are fetched with the global `fetch`. Pass a custom implementation when needed.
 
 ```ts
-const result = await new MarkItDown().convert("https://example.com/article.html");
+const result = await new MarkItDown().convert(
+	"https://example.com/article.html",
+);
 ```
 
 Browser requests remain subject to the remote server's CORS policy.
@@ -73,13 +76,16 @@ type ByteSource = Uint8Array | ArrayBufferLike | ArrayBufferView | Blob;
 type ConversionSource = ByteSource | Response | URL | string;
 
 class MarkItDown {
-  convert(source: ConversionSource, options?: ConverterOptions): Promise<ConverterResult>;
+	convert(
+		source: ConversionSource,
+		options?: ConverterOptions,
+	): Promise<ConverterResult>;
 
-  /** @deprecated Pass the source directly to convert(). */
-  convertBuffer(
-    source: ByteSource,
-    options: ConverterOptions & { file_extension: string }
-  ): Promise<ConverterResult>;
+	/** @deprecated Pass the source directly to convert(). */
+	convertBuffer(
+		source: ByteSource,
+		options: ConverterOptions & { file_extension: string },
+	): Promise<ConverterResult>;
 }
 ```
 

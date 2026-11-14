@@ -12,23 +12,26 @@ export type ByteSource = Uint8Array | ArrayBufferLike | ArrayBufferView | Blob;
 export type ConverterSource = ByteSource | Response | URL | string;
 
 export type ConverterOptions<Options = unknown> = Options & {
-  /** Original file extension, with or without a leading dot. */
-  extension?: string;
-  /** Original URL, used by site-specific HTML converters. */
-  url?: string;
-  /** Override the global fetch implementation. */
-  fetch?: typeof fetch;
-  /** Enable debug logging. */
-  debug?: boolean;
-  /** @internal Parent converters. */
-  _converters?: Converter[];
+	/** Original file extension, with or without a leading dot. */
+	extension?: string;
+	/** Original URL, used by site-specific HTML converters. */
+	url?: string;
+	/** Override the global fetch implementation. */
+	fetch?: typeof fetch;
+	/** Enable debug logging. */
+	debug?: boolean;
+	/** @internal Parent converters. */
+	_converters?: Converter[];
 };
 
 export type ConverterResult = {
-  title: string | null;
-  markdown: string;
+	title: string | null;
+	markdown: string;
 } | null;
 
 export interface Converter<Options = unknown> {
-  convert(source: Uint8Array, options: ConverterOptions<Options>): Promise<ConverterResult>;
+	convert(
+		source: Uint8Array,
+		options: ConverterOptions<Options>,
+	): Promise<ConverterResult>;
 }

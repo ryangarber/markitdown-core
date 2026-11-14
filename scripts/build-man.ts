@@ -10,13 +10,13 @@ import { generateManPage } from "@optique/man";
 import { program } from "../src/cli.ts";
 
 const { values } = parseArgs({
-  options: {
-    out: {
-      type: "string",
-      short: "o",
-      default: resolve(import.meta.dirname, "../dist/markitdown.1")
-    }
-  }
+	options: {
+		out: {
+			type: "string",
+			short: "o",
+			default: resolve(import.meta.dirname, "../dist/markitdown.1"),
+		},
+	},
 });
 
 const page = generateManPage(program, { section: 1, manual: "User Commands" });
