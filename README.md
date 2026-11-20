@@ -20,13 +20,13 @@ Audio, image metadata, local-path, and YouTube transcript features from the orig
 ## Installation
 
 ```sh
-pnpm install @ryangarber/markitdown-ts
+pnpm install markitdown-core
 ```
 
 ## Usage
 
 ```ts
-import { MarkItDown } from "@ryangarber/markitdown-ts";
+import { MarkItDown } from "markitdown-core";
 
 const bytes: Uint8Array = /* plain bytes */;
 
@@ -96,7 +96,7 @@ class MarkItDown {
 The `markitdown` command converts a file and prints its Markdown:
 
 ```sh
-npx @ryangarber/markitdown-ts report.docx
+npx markitdown-core report.docx
 markitdown --extension html page    # when the type can't be detected
 markitdown report.pdf --json        # print { title, markdown }
 ```
