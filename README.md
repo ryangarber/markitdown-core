@@ -1,6 +1,6 @@
-# markitdown-ts
+# markitdown-core
 
-`markitdown-ts` converts various file types to Markdown without filesystem, process, stream, or any other runtime-specific dependencies. It can run in browsers, workers, edge functions, and all other modern JavaScript environments.
+`markitdown-core` converts various file types to Markdown without filesystem, process, stream, or any other runtime-specific dependencies. It can run in browsers, workers, edge functions, and all other modern JavaScript environments.
 
 ## Supported formats
 
@@ -80,16 +80,8 @@ class MarkItDown {
 		source: ConversionSource,
 		options?: ConverterOptions,
 	): Promise<ConverterResult>;
-
-	/** @deprecated Pass the source directly to convert(). */
-	convertBuffer(
-		source: ByteSource,
-		options: ConverterOptions & { file_extension: string },
-	): Promise<ConverterResult>;
 }
 ```
-
-`convertBuffer` remains as a compatibility alias, but `convert(bytes, options)` is preferred.
 
 ## CLI
 
@@ -101,7 +93,7 @@ markitdown --extension html page    # when the type can't be detected
 markitdown report.pdf --json        # print { title, markdown }
 ```
 
-To use it without Node, download the standalone build for your system (`markitdown-darwin-arm64`, `markitdown-darwin-x64`, `markitdown-linux-arm64`, `markitdown-linux-x64`, `markitdown-win32-arm64.exe` or `markitdown-win32-x64.exe`) from the [latest release](https://github.com/ryangarber/markitdown-ts/releases/latest), or build it from source with `pnpm build:cli` (needs [Bun](https://bun.sh)).
+To use it without Node, download the standalone build for your system (`markitdown-darwin-arm64`, `markitdown-darwin-x64`, `markitdown-linux-arm64`, `markitdown-linux-x64`, `markitdown-win32-arm64.exe` or `markitdown-win32-x64.exe`) from the [latest release](https://github.com/ryangarber/markitdown-core/releases/latest), or build it from source with `pnpm build:cli` (needs [Bun](https://bun.sh)).
 
 ## Development
 
