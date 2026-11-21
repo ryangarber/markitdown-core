@@ -1,6 +1,6 @@
 {
 	"name": "markitdown-core",
-	"version": "0.2.4",
+	"version": "0.2.5",
 	"description": "Convert various file formats to Markdown for indexing, text analysis, and other applications that benefit from structured text. Node-free fork of the TypeScript fork of the original Python library.",
 	"keywords": [
 		"markdown",

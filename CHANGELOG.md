@@ -1,3 +1,9 @@
+## v0.2.5 (2026-11-21)
+
+### Other
+
+- update readme ([638284d](https://github.com/ryangarber/markitdown-core/commit/638284dba70a2c573af383c6d90420071abbb9e2))
+
 ## v0.2.4 (2026-11-21)
 
 ### Other
