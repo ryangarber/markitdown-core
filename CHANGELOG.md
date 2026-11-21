@@ -1,3 +1,10 @@
+## v0.2.4 (2026-11-21)
+
+### Other
+
+- update package name ([4e3d109](https://github.com/ryangarber/markitdown-core/commit/4e3d109984f69591edd84cc9430d9701226bae9b))
+- bump dependencies ([4e3d109](https://github.com/ryangarber/markitdown-core/commit/4e3d109984f69591edd84cc9430d9701226bae9b))
+
 ## v0.2.3 (2026-11-14)
 
 ### Other
